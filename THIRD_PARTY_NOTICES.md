@@ -1,9 +1,19 @@
-# Third-party notices
+# Third-party Notices
 
-A biblioteca de referências `references/3d-excellence-library-v19.json` contém **links** para exemplos de Kenney, Quaternius e Poly Haven identificados como CC0 durante a curadoria. As prévias remotas e os downloads de modelos **não foram redistribuídos** neste repositório; confirme condições no site de origem antes de incorporar novos arquivos.
+This repository's source code is distributed under the existing [MIT License](LICENSE). **Third-party reference works and independently authored documents are not automatically relicensed as MIT.**
 
-Os nomes e marcas Blender e Roblox pertencem aos respectivos titulares. Links para documentação oficial não constituem sublicença da documentação.
+## 3D quality-example sources
 
-O PDF `Atlas_Blender_5_2_2_LTS_407_Ferramentas_e_11_Abas.pdf` é um documento de referência independente, destinado à pasta `assets/blender-atlas/`. A licença MIT do código não altera automaticamente a licença do documento ou de quaisquer imagens de terceiros.
+The curated `references/3d-excellence-library-v19.json` catalog links to models/examples from **Kenney**, **Quaternius**, and **Poly Haven** identified as CC0 in the original curation. The library normally links to remote previews; it does **not** embed the original third-party 3D models. Check each publisher's current terms before downloading or redistributing an asset.
 
-Os três PNGs de demonstração de cadeira do plugin privado não serão redistribuídos neste repositório, por decisão do mantenedor.
+## Blender Atlas PDF
+
+The bundled PDF at `assets/blender-atlas/Atlas_Blender_5_2_2_LTS_407_Ferramentas_e_11_Abas.pdf` is an independently authored technical field guide used by the Atlas Tool Selection Engine. It includes references to Blender's official documentation. The repository's MIT license should not be interpreted as changing the licensing of Blender's documentation or other third-party material cited by that PDF.
+
+## Trademarks and reference implementations
+
+Blender, Roblox and other third-party product names remain the property of their respective rights holders. This independent toolkit is not an official project of those vendors.
+
+## Historical image fixtures
+
+Three proprietary/prototype chair PNG examples from the original private plugin were **deliberately excluded** from this public repository. They are not required for installing the plugin, though some historical tests still reference them.
