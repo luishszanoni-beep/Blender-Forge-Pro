@@ -2,8 +2,6 @@
 
 **Blender Forge Pro v1.9.0** é um sistema de planejamento, construção, auditoria e exportação de modelos 3D no Blender com orientação para Codex. Inclui oito skills especializadas e pipelines para modelos estilizados, criaturas, props e assets destinados ao Roblox, GLB e renderização.
 
-> **Sincronização pública parcialmente concluída:** os 131 arquivos de texto da versão 1.9.0 estão neste repositório. Quatro arquivos binários da distribuição privada original ainda precisam ser importados, incluindo o PDF do Atlas e três PNGs de teste. Veja [status da publicação](docs/PUBLICATION_STATUS.md).
-
 ## Funcionalidades
 
 | Módulo | Propósito |
@@ -26,20 +24,7 @@ python scripts/excellence_reference_router.py validate
 python scripts/gcb.py validate examples/gcb/demo_bloxy_plant.json
 ```
 
-O `gcb.py prepare` gera também um planejamento de ferramentas (ATSE); **no checkout público atual, a consulta completa ao ATSE requer que o PDF original seja copiado para o caminho esperado**.
-
 Consulte [AGENTS.md](AGENTS.md), [guia de início](INICIO_RAPIDO_PTBR.md), [guia do GCB](INICIO_RAPIDO_GCB_PTBR.md), [biblioteca de referências](references/3d-excellence-library-v19.md) e [notas da versão 1.9](CHANGELOG_V1_9.md).
-
-## Estado dos arquivos binários
-
-A cópia pública ainda não contém:
-
-- `assets/blender-atlas/Atlas_Blender_5_2_2_LTS_407_Ferramentas_e_11_Abas.pdf` — SHA-256 esperado: `1e8170c7631d1c86a073f45c926eea2e20157f104545eaa868c9ae401c9104cd`.
-- `examples/reference_images/chair_front.png`
-- `examples/reference_images/chair_side.png`
-- `examples/reference_images/chair_top.png`
-
-Esses binários estavam no pacote privado, mas não puderam ser transferidos pelo canal de escrita de texto do conector GitHub. **Não substitua o PDF por outro documento sem regenerar e auditar o índice**.
 
 ## Segurança, licença e responsabilidade técnica
 
