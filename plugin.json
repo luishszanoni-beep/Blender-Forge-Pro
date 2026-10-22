@@ -62,14 +62,14 @@
     "com.openai": {
       "interface": {
         "displayName": "Blender Forge Pro",
-        "shortDescription": "Modelagem 3D com QA avançado",
-        "longDescription": "Oito skills para modelagem 3D no Blender com QA, geometria, reparos e exportacao. AIR recomenda modelo e esforco por tarefa (5 classes/4 esforcos) com orcamento e biblioteca; delegacao real depende de runtime externo verificado.",
+        "shortDescription": "Precision Blender 3D & QA",
+        "longDescription": "Eight coordinated Blender skills for reference-driven 3D modeling, GCB construction blueprints, anatomy-aware reference-image QA, optional rigging, tool selection, curated examples, and export verification. AIR suggests models and effort levels; real delegation requires a supported runtime.",
         "developerName": "Blender Forge Pro",
         "category": "Productivity",
         "capabilities": [
           "Interactive"
         ],
-        "defaultPrompt": "Qual modelo 3D vamos construir ou corrigir?"
+        "defaultPrompt": "What 3D asset should we build or refine?"
       }
     }
   }

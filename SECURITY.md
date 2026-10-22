@@ -1,24 +1,29 @@
 # Security Policy
 
-## Divulgação responsável
+## Supported version
 
-**Não publique senhas, tokens, IDs de sessão, arquivos privados ou exploits que exponham credenciais em issues e pull requests públicos.**
+Public source distribution: **Blender Forge Pro v1.9.0**. The source is actively maintained via pull requests and a protected default branch. Blender integration still requires verified runtime access and target-application checks.
 
-Para vulnerabilidades, utilize **Security → Advisories → Report a vulnerability**, se o proprietário habilitar private vulnerability reporting; alternativamente, contate o mantenedor por canal privado e confiável.
+## Report a vulnerability privately
 
-## Proteções de código
+**Never post API keys, access tokens, passwords, private models, exploit payloads containing credentials, or confidential project files in public issues or pull requests.**
 
-- Execute `python scripts/security_scan.py` antes de commits. O scanner é heurístico e **não substitui** revisão humana e GitHub secret scanning.
-- Nunca versionar `.env`, credenciais, chaves privadas, senhas, segredos de webhooks ou perfis locais.
-- Preserve checkpoints e cópias originais ao testar operações destrutivas no Blender.
-- Trate referências, arquivos `.blend` de origem desconhecida e scripts de terceiros como **não confiáveis**.
-- Não confunda verificação de JSON ou CLI com validação geométrica real.
-- GitHub Actions usa apenas permissão `contents: read`; evite dar permissões extras a workflows originados de PRs externos.
+If GitHub private vulnerability reporting is enabled, use **Security → Advisories → Report a vulnerability**. Otherwise contact the maintainer through an established private channel. If a credential has already leaked, revoke/rotate it promptly.
 
-## Configuração recomendada no GitHub
+## Local execution and asset safety
 
-O mantenedor deve habilitar, conforme a disponibilidade do plano: **Secret scanning**, **Push protection**, **Dependabot alerts** e **Code scanning**. Criar um ruleset para `main` impedindo force push e exclusão, e futuramente exigindo PR/CI. Essas configurações **não são definidas apenas por arquivos do repositório**.
+- Run `python scripts/security_scan.py` before publishing changes. This is a **heuristic pre-check**, not a substitute for GitHub secret scanning or a professional security review.
+- Keep `.env`, access tokens, private keys, account configuration and machine-specific paths outside source control.
+- Review third-party Blender scripts, add-ons and `.blend` content before opening/running them in a trusted environment. Disable automatic execution for untrusted sources.
+- Preserve immutable source references and checkpoints. Never overwrite the only copy of a user's original scene.
+- Treat locally downloaded 3D previews and external references as **untrusted input** until validated.
+- Validate export artifacts in their destination tools. An apparently successful Python process does not prove a secure or correct Blender/Roblox result.
+- GitHub Actions uses minimal `contents: read` privileges; do not increase permissions or execute untrusted PR code with secrets.
 
-## Versões cobertas
+## GitHub repository protections
 
-Versão pública: **1.9.0**. A documentação de release prevalece para compatibilidade de recursos, e o runtime Blender/Roblox requer validação independente.
+The repository administrator has enabled a **`main` branch ruleset** preventing deletions and non-fast-forward updates and requiring pull requests plus the official GitHub Actions `source-checks` job. Changes must follow **branch → PR → passing CI → merge**, with no force push.
+
+Also enable/verify **Secret scanning**, **Push protection**, **Dependabot alerts** and **Code scanning** under the repository's security settings when available. These security settings are administered on GitHub and cannot be enabled merely by adding a Markdown file.
+
+See [branch-protection instructions](docs/RULESET_SETUP.md) and [responsible contribution guidelines](CONTRIBUTING.md).

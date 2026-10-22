@@ -1,34 +1,41 @@
-# Relatório de publicação pública — 22/10/2026
+# Public Source Publication and Security Audit
 
-**Fonte:** Blender Forge Pro, plugin privado original v1.9.0. O código textual foi importado após revisão de segurança.
+**Reviewed on:** October 22, 2026 · **Source version:** Blender Forge Pro v1.9.0
 
-## Auditoria
+## Source review
 
-- Inventário da versão original: **135 arquivos** (131 textuais + 4 binários).
-- Arquivos textuais examinados: **131 de 131**.
-- A busca não identificou tokens reais OpenAI/GitHub/AWS/Google/Stripe/Slack, chaves privadas PEM nem URLs de webhooks.
-- Um exemplo **fictício** de URL com autenticação básica em `tests/test_excellence_references_v19.py` foi reescrito sem alterar o teste.
-- Nenhum arquivo com nome típico de segredos (como `.env`, `credentials.json` e chaves privadas) foi encontrado no inventário.
-- A licença MIT existente foi mantida.
+The original plugin inventory contained **135 files** (131 text sources and four binary files). All 131 text files were previously reviewed with heuristic searches for known API-key families, GitHub credentials, private-key blocks, webhook tokens and other common secret patterns. The review found **no confirmed live credentials** in the textual sources.
 
-## Atlas do Blender
+A synthetic Basic-Authentication URL in a negative unit-test fixture was rewritten during the public import to avoid a misleading credential-like literal.
 
-Foi criada a pasta rastreável `assets/blender-atlas/`, com `.gitkeep` temporário, para receber manualmente:
+This is **not a mathematical guarantee** that no unknown secret or vulnerability exists. Follow [Security Policy](../SECURITY.md) and perform an independent audit before using sensitive assets or deploying model-execution infrastructure.
+
+## Bundled Blender Atlas
+
+The original Atlas PDF has now been uploaded to:
 
 `assets/blender-atlas/Atlas_Blender_5_2_2_LTS_407_Ferramentas_e_11_Abas.pdf`
 
-SHA-256 esperado: `1e8170c7631d1c86a073f45c926eea2e20157f104545eaa868c9ae401c9104cd`.
+The expected SHA-256 is:
 
-Até o envio do PDF, os testes e a consulta completa que verificam a integridade do Atlas poderão falhar. Não substituir o PDF por outro com conteúdo diferente sem atualizar e verificar o índice técnico correspondente.
+`1e8170c7631d1c86a073f45c926eea2e20157f104545eaa868c9ae401c9104cd`
 
-## Imagens de cadeira
+Verify the local copy with:
 
-As três imagens `chair_front.png`, `chair_side.png` e `chair_top.png` **não serão publicadas**, por decisão do mantenedor. Elas não são pendências de upload.
+~~~bash
+python scripts/blender_tool_router.py verify-index
+~~~
 
-**Nota técnica:** alguns testes e exemplos herdados da versão privada ainda fazem referência a esses arquivos; esses cenários precisam de fixtures alternativas caso se deseje executar a suíte integral sem os PNGs.
+The Atlas is a **secondary guide**, not a substitute for current Blender API documentation or actual runtime tests.
 
-## Limites da auditoria
+## Intentionally excluded historical fixtures
 
-A análise de padrões reduz riscos, mas não comprova a ausência absoluta de segredos desconhecidos. Os binários originais não tiveram auditoria com a mesma cobertura dos arquivos textuais. Proteção de branches, secret scanning e push protection dependem de configuração e verificação nas definições do GitHub.
+The three demonstration PNG files `chair_front.png`, `chair_side.png` and `chair_top.png` were not imported into this public repository by maintainer decision. They are **not pending uploads**. Some historical test cases still reference those files; such cases need clean-room replacement fixtures before running the complete legacy test suite.
 
-A publicação de scripts e testes não comprova, por si só, geometria real, rigging ou exportação funcionando no Blender/Roblox Studio.
+## Current GitHub protections
+
+The `main` branch ruleset is **active**, requiring pull requests and the `source-checks` GitHub Actions job while blocking branch deletion and force pushes. Secret scanning/push-protection toggles require separate administrative verification; a workflow file does not prove they are enabled.
+
+## Production assurance
+
+The public source validates planning and routing logic. It does **not** establish that all Blender operators were executed, that a model looks correct, that a rig imports into Roblox, or that every optional test fixture is present.
