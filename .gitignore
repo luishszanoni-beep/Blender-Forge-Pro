@@ -1,0 +1,41 @@
+# Local secrets / credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+credentials.json
+secrets.json
+.netrc
+.npmrc
+.pypirc
+.aws/
+.ssh/
+.codex/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local Blender work
+*.blend1
+*.blend2
+*.blend3
+*.blend_autosave
+*.blend.lock
+*.tmp
+*.bak
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+cache/
+outputs/
+renders/
