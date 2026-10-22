@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.4",
+  "catalog_id": "forge-air-production-empty",
+  "catalog_kind": "production",
+  "runtime": {
+    "mode": "advisory",
+    "supports_subagents": false,
+    "supports_model_override": false,
+    "supports_effort_override": false,
+    "verified_on_host": false
+  },
+  "policy": {
+    "max_parallel_readers": 2,
+    "max_attempts": 2,
+    "benchmark_min_samples": 5,
+    "min_observed_pass_rate": 0.65,
+    "latency_weight_usd_per_minute": 0.02
+  },
+  "models": []
+}

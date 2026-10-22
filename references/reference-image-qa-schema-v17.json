@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blender Forge Pro G1-R | Anatomy-Aware Image Reference QA v1.0",
+  "description": "Estrutura verificavel do inventario/handoff para imagens geradas quando solicitadas. A validacao de anatomia exige inspecao visual externa e independente.",
+  "type": "object",
+  "required": ["schema_version", "project_id", "subject_type", "purpose", "images", "parts", "modeling_steps", "checks", "review"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "project_id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,59}$"},
+    "subject_type": {"enum": ["creature", "character", "plant", "vehicle", "mechanical", "object"]},
+    "purpose": {"const": "image_references_for_3d"},
+    "images": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/image"}},
+    "parts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/part"}},
+    "modeling_steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}},
+    "checks": {"type": "array", "items": {"$ref": "#/$defs/check"}},
+    "review": {"$ref": "#/$defs/review"}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,59}$"},
+    "idArray": {"type": "array", "items": {"$ref": "#/$defs/id"}},
+    "image": {
+      "type": "object",
+      "required": ["id", "path", "view", "projection", "origin", "confidence", "calibrated"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "path": {"type": "string", "minLength": 1},
+        "view": {"enum": ["front", "back", "left", "right", "side", "top", "bottom", "three_quarter", "closeup"]},
+        "projection": {"enum": ["orthographic", "perspective", "unknown"]},
+        "origin": {"enum": ["user_original", "generated_design", "generated_inferred"]},
+        "confidence": {"enum": ["observed", "inferred", "unknown"]},
+        "calibrated": {"type": "boolean"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "based_on_ids": {"$ref": "#/$defs/idArray"}
+      }
+    },
+    "vec3": {"type": "array", "prefixItems": [{"type":"number"}, {"type":"number"}, {"type":"number"}], "items": false, "minItems": 3},
+    "part": {
+      "type": "object",
+      "required": ["id", "label", "image_ids", "primitive", "confidence", "structural_note", "build_instruction", "connection_ids", "moving", "separate_mesh"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "label": {"type": "string", "minLength": 1},
+        "image_ids": {"$ref": "#/$defs/idArray"},
+        "primitive": {"enum": ["box", "sphere", "cylinder", "cone", "wedge", "custom_mesh", "curve", "compound"]},
+        "confidence": {"enum": ["observed", "inferred", "unknown"]},
+        "structural_note": {"type": "string", "minLength": 1},
+        "build_instruction": {"type": "string", "minLength": 1},
+        "connection_ids": {"$ref": "#/$defs/idArray"},
+        "moving": {"type": "boolean"},
+        "separate_mesh": {"type": "boolean"},
+        "pivot": {"anyOf": [{"$ref": "#/$defs/vec3"}, {"type": "null"}]},
+        "gcb_part_id": {"$ref": "#/$defs/id"}
+      }
+    },
+    "step": {
+      "type": "object",
+      "required": ["id", "part_ids", "instruction", "acceptance"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "part_ids": {"$ref": "#/$defs/idArray"},
+        "instruction": {"type": "string", "minLength": 1},
+        "acceptance": {"type": "string", "minLength": 1}
+      }
+    },
+    "check": {
+      "type": "object",
+      "required": ["category", "status", "image_ids", "note"],
+      "properties": {
+        "category": {"enum": ["identity", "anatomy", "connections", "articulation", "views", "geometry", "surface", "handoff"]},
+        "status": {"enum": ["PASS", "FAIL", "UNKNOWN", "NA"]},
+        "image_ids": {"$ref": "#/$defs/idArray"},
+        "part_ids": {"$ref": "#/$defs/idArray"},
+        "note": {"type": "string", "minLength": 1}
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["status", "reviewer_role", "inspected_image_ids", "notes", "blockers"],
+      "properties": {
+        "status": {"enum": ["approved", "rejected", "pending"]},
+        "reviewer_role": {"type": "string"},
+        "inspected_image_ids": {"$ref": "#/$defs/idArray"},
+        "notes": {"type": "string"},
+        "blockers": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

@@ -1,0 +1,707 @@
+{
+  "library_version": "1.0",
+  "forge_version": "1.9.0",
+  "name": "3D Excellence Reference Library",
+  "count": 15,
+  "license_policy": "CC0-1.0 from official asset pages; link to source; preview images are remote URLs, not shipped as binaries",
+  "evidence_policy": "Source and marketing images demonstrate visible shape and general art direction only. They do not prove rig, mesh topology, UV, source-file health, true dimensions, collision, LOD behavior or Roblox compatibility.",
+  "entry_policy": "Art supplied by the user always overrides exemplar visual design. Exemplars teach transferable construction principles only, not a substitute for source art.",
+  "viewing": "remote",
+  "source_sites": [
+    "kenney.nl",
+    "quaternius.com",
+    "polyhaven.com"
+  ],
+  "entries": [
+    {
+      "id": "kenney_blocky_characters",
+      "title": "Blocky Characters",
+      "provider": "Kenney",
+      "creator": "Kenney",
+      "asset_type": "pack",
+      "source_url": "https://kenney.nl/assets/blocky-characters",
+      "preview_url": "https://www.kenney.nl/media/pages/assets/blocky-characters/4ace046751-1749547441/preview.png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "bloxy",
+        "stylized"
+      ],
+      "topics": [
+        "bloxy",
+        "blocky",
+        "roblox",
+        "character",
+        "humanoid",
+        "rig",
+        "animation",
+        "modular",
+        "silhouette",
+        "geometry",
+        "game_ready"
+      ],
+      "gates": [
+        "G1",
+        "G1.5",
+        "G2",
+        "G6",
+        "G7"
+      ],
+      "learning_points": [
+        "Silhueta construída por volumes quadrangulares deliberados, sem alisar o estilo por padrão",
+        "Divisão visual clara de cabeça, tronco e membros; escalas relativas consistentes",
+        "Usar o pack como referência de linguagem Bloxy, não como esqueleto Roblox garantido"
+      ],
+      "cannot_prove_from_preview": [
+        "topologia interna",
+        "orientação precisa dos pivôs",
+        "compatibilidade R15 do Roblox sem reimportação"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "kenney_nature_kit",
+      "title": "Nature Kit",
+      "provider": "Kenney",
+      "creator": "Kenney",
+      "asset_type": "pack",
+      "source_url": "https://kenney.nl/assets/nature-kit",
+      "preview_url": "https://kenney.nl/media/pages/assets/nature-kit/b154f66add-1677698896/sample.png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "bloxy",
+        "stylized"
+      ],
+      "topics": [
+        "plant",
+        "nature",
+        "foliage",
+        "tree",
+        "environment",
+        "modular",
+        "bloxy",
+        "stylized",
+        "low_poly",
+        "blockout",
+        "repetition",
+        "instance"
+      ],
+      "gates": [
+        "G1",
+        "G1.5",
+        "G2",
+        "G5"
+      ],
+      "learning_points": [
+        "Simplificar troncos, copas, rochas e terreno sem destruir identidade",
+        "Repetir módulos sem criar dezenas de geometrias redundantes",
+        "Manter encaixes de cenário e gramática de formas coerentes"
+      ],
+      "cannot_prove_from_preview": [
+        "rig de planta",
+        "topologia exata de um item isolado",
+        "contagem de triângulos de uma cena inteira"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "kenney_platformer_kit",
+      "title": "Platformer Kit",
+      "provider": "Kenney",
+      "creator": "Kenney",
+      "asset_type": "pack",
+      "source_url": "https://kenney.nl/assets/platformer-kit",
+      "preview_url": "https://kenney.nl/media/pages/assets/platformer-kit/12fa6cafde-1775122247/sample.png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "bloxy",
+        "stylized"
+      ],
+      "topics": [
+        "level",
+        "environment",
+        "modular",
+        "game_ready",
+        "platform",
+        "terrain",
+        "snap",
+        "bloxy",
+        "stylized",
+        "assembly"
+      ],
+      "gates": [
+        "G1.5",
+        "G2",
+        "G5",
+        "G8"
+      ],
+      "learning_points": [
+        "Proporções consistentes entre blocos modulares e props",
+        "Desenhar encaixes reproduzíveis para tiles e plataformas",
+        "Evitar detalhes que encarecem o mapa sem melhorar leitura"
+      ],
+      "cannot_prove_from_preview": [
+        "grade exata de snap",
+        "colisão validada",
+        "orçamento de draw calls apenas pela imagem"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "kenney_survival_kit",
+      "title": "Survival Kit",
+      "provider": "Kenney",
+      "creator": "Kenney",
+      "asset_type": "pack",
+      "source_url": "https://kenney.nl/assets/survival-kit",
+      "preview_url": "https://kenney.nl/media/pages/assets/survival-kit/c00b6d8fbd-1677579835/preview.png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "stylized",
+        "bloxy"
+      ],
+      "topics": [
+        "prop",
+        "modular",
+        "hard_surface",
+        "low_poly",
+        "stylized",
+        "environment",
+        "assembly",
+        "wood",
+        "construction"
+      ],
+      "gates": [
+        "G1.5",
+        "G2",
+        "G5",
+        "G8"
+      ],
+      "learning_points": [
+        "Montagem por peças funcionais e reutilizáveis",
+        "Volumes estilizados com leitura clara mesmo pequenos",
+        "Hierarquia de complexidade: estrutura primeiro, decoração depois"
+      ],
+      "cannot_prove_from_preview": [
+        "espessuras reais não medidas",
+        "ligações internas ocultas",
+        "integridade manifold do pack"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "kenney_animated_protagonists",
+      "title": "Animated Characters Protagonists",
+      "provider": "Kenney",
+      "creator": "Kenney",
+      "asset_type": "pack",
+      "source_url": "https://kenney.nl/assets/animated-characters-protagonists",
+      "preview_url": "https://www.kenney.nl/media/pages/assets/animated-characters-protagonists/98921ae406-1674931821/preview.png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "stylized"
+      ],
+      "topics": [
+        "humanoid",
+        "character",
+        "animation",
+        "rig",
+        "pose",
+        "proportion",
+        "game_ready",
+        "stylized"
+      ],
+      "gates": [
+        "G1",
+        "G2",
+        "G6",
+        "G7"
+      ],
+      "learning_points": [
+        "Proporções simplificadas coerentes entre variantes",
+        "Manter desenho dos membros legível durante poses",
+        "Comparar silhueta do personagem em visão de jogo"
+      ],
+      "cannot_prove_from_preview": [
+        "pesos de deformação exatos",
+        "qualidade dos loops de animação",
+        "rig exportado sem testar"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "quaternius_ultimate_monsters",
+      "title": "Ultimate Monsters",
+      "provider": "Quaternius",
+      "creator": "Quaternius",
+      "asset_type": "pack",
+      "source_url": "https://quaternius.com/packs/ultimatemonsters.html",
+      "preview_url": "https://quaternius.com/assets/images/fullres/ultimatemonsters.jpg",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "stylized",
+        "bloxy"
+      ],
+      "topics": [
+        "dragon",
+        "creature",
+        "monster",
+        "wing",
+        "jaw",
+        "horn",
+        "tail",
+        "stylized",
+        "rig",
+        "animation",
+        "anatomy",
+        "silhouette"
+      ],
+      "gates": [
+        "G1",
+        "G1.5",
+        "G2",
+        "G6",
+        "G7"
+      ],
+      "learning_points": [
+        "Silhuetas de criaturas diferenciadas por cabeça, membros, asas e cauda",
+        "Articular peças móveis de criaturas sem duplicar anatomia",
+        "Separar planos estruturais de detalhes decorativos"
+      ],
+      "cannot_prove_from_preview": [
+        "anatomia escondida",
+        "qualidade efetiva dos pesos",
+        "posição exata de ossos no modelo original"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "quaternius_animated_animals",
+      "title": "Ultimate Animated Animal Pack",
+      "provider": "Quaternius",
+      "creator": "Quaternius",
+      "asset_type": "pack",
+      "source_url": "https://quaternius.com/packs/ultimateanimatedanimals.html",
+      "preview_url": "https://quaternius.com/assets/images/fullres/ultimateanimatedanimal.jpg",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "stylized"
+      ],
+      "topics": [
+        "animal",
+        "quadruped",
+        "anatomy",
+        "animation",
+        "rig",
+        "tail",
+        "leg",
+        "joint",
+        "stylized",
+        "creature"
+      ],
+      "gates": [
+        "G1",
+        "G2",
+        "G6",
+        "G7"
+      ],
+      "learning_points": [
+        "Relacionar quatro patas ao tronco e à base de sustentação",
+        "Comparar massas de ombro/quadril/pescoço em animais estilizados",
+        "Preservar articulações plausíveis mesmo com simplificação poligonal"
+      ],
+      "cannot_prove_from_preview": [
+        "ossos reais e pesos",
+        "cinemática correta a partir de imagem parada",
+        "retarget no Roblox"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "quaternius_modular_ruins",
+      "title": "Ultimate Modular Ruins Pack",
+      "provider": "Quaternius",
+      "creator": "Quaternius",
+      "asset_type": "pack",
+      "source_url": "https://quaternius.com/packs/ultimatemodularruins.html",
+      "preview_url": "https://quaternius.com/assets/images/fullres/ultimatemodularruins.jpg",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "stylized",
+        "bloxy"
+      ],
+      "topics": [
+        "architecture",
+        "modular",
+        "ruins",
+        "wall",
+        "arch",
+        "environment",
+        "assembly",
+        "snap",
+        "repeat",
+        "stylized"
+      ],
+      "gates": [
+        "G1.5",
+        "G2",
+        "G5",
+        "G8"
+      ],
+      "learning_points": [
+        "Sistema de peças intercambiáveis e paredes com alinhamento consistente",
+        "Passagem de blocos grandes a ornamentos sem perder a grade",
+        "Módulos repetidos e variações distribuídos sem desperdício"
+      ],
+      "cannot_prove_from_preview": [
+        "colisões verificadas",
+        "medidas absolutas",
+        "encaixes reais de todas as peças pelo diorama"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "quaternius_ultimate_nature",
+      "title": "Ultimate Nature Pack",
+      "provider": "Quaternius",
+      "creator": "Quaternius",
+      "asset_type": "pack",
+      "source_url": "https://quaternius.com/packs/ultimatenature.html",
+      "preview_url": "https://quaternius.com/assets/images/fullres/ultimatenature.jpg",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "bloxy",
+        "stylized"
+      ],
+      "topics": [
+        "plant",
+        "tree",
+        "foliage",
+        "bush",
+        "rock",
+        "bloxy",
+        "stylized",
+        "low_poly",
+        "geometry",
+        "procedural",
+        "instance"
+      ],
+      "gates": [
+        "G1",
+        "G1.5",
+        "G2",
+        "G5"
+      ],
+      "learning_points": [
+        "Decomposição modular de árvores, galhos, copas e rochas",
+        "Foliagem feita com formas simples mas variedade de escala e orientação",
+        "Diferença entre low-poly facetado e Bloxy de volumes intencionais"
+      ],
+      "cannot_prove_from_preview": [
+        "normais e materiais internos",
+        "joint de planta animada",
+        "quantidade de polígonos exata"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "polyhaven_drill_01",
+      "title": "Drill 01",
+      "provider": "Poly Haven",
+      "creator": "Fernando Quinn",
+      "asset_type": "model",
+      "source_url": "https://polyhaven.com/a/Drill_01",
+      "preview_url": "https://cdn.polyhaven.com/asset_img/thumbs/Drill_01.png?format=png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "realistic"
+      ],
+      "topics": [
+        "prop",
+        "hard_surface",
+        "bevel",
+        "pbr",
+        "plastic",
+        "metal",
+        "mechanical",
+        "game_ready",
+        "topology",
+        "assembly"
+      ],
+      "gates": [
+        "G1.5",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "learning_points": [
+        "Separar empunhadura, bateria e cabeçote em volumes com função visual clara",
+        "Controlar bordas e quinas para leitura realista de plástico e metal",
+        "Estudar distribuição de detalhes grandes e microdetalhes"
+      ],
+      "cannot_prove_from_preview": [
+        "topologia interna",
+        "funcionamento mecânico",
+        "qualidade de UV pelas imagens de preview"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "polyhaven_round_wooden_table_01",
+      "title": "Round Wooden Table 01",
+      "provider": "Poly Haven",
+      "creator": "Ulan Cabanilla",
+      "asset_type": "model",
+      "source_url": "https://polyhaven.com/a/round_wooden_table_01",
+      "preview_url": "https://cdn.polyhaven.com/asset_img/thumbs/round_wooden_table_01.png?format=png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "realistic"
+      ],
+      "topics": [
+        "furniture",
+        "table",
+        "wood",
+        "hard_surface",
+        "joinery",
+        "symmetry",
+        "curve",
+        "pbr",
+        "proportion",
+        "assembly"
+      ],
+      "gates": [
+        "G1",
+        "G1.5",
+        "G2",
+        "G4"
+      ],
+      "learning_points": [
+        "Hierarquia de tampo, pedestal e pés com proporção estável",
+        "Superfícies de revolução e detalhes torneados sem triangulação excessiva",
+        "Material de madeira e acabamento coerentes com os volumes"
+      ],
+      "cannot_prove_from_preview": [
+        "encaixes internos de marcenaria",
+        "espessuras reais",
+        "triangulação topo sem arquivo"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "polyhaven_potted_plant_02",
+      "title": "Potted Plant 02",
+      "provider": "Poly Haven",
+      "creator": "Rico Cilliers",
+      "asset_type": "model",
+      "source_url": "https://polyhaven.com/a/potted_plant_02",
+      "preview_url": "https://cdn.polyhaven.com/asset_img/thumbs/potted_plant_02.png?format=png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "realistic"
+      ],
+      "topics": [
+        "plant",
+        "organic",
+        "foliage",
+        "leaf",
+        "material",
+        "alpha",
+        "pbr",
+        "nature",
+        "realistic",
+        "stem"
+      ],
+      "gates": [
+        "G1",
+        "G1.5",
+        "G2",
+        "G4",
+        "G5"
+      ],
+      "learning_points": [
+        "Separação entre vaso, solo, caules e lâminas foliares",
+        "Superposição orgânica que preserva a leitura dos caules",
+        "Texturas e microdetalhes não substituem geometria de silhueta"
+      ],
+      "cannot_prove_from_preview": [
+        "rig de folhas",
+        "UV ou dupla-face garantida",
+        "estrutura oculta dos caules"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "polyhaven_street_rat",
+      "title": "Street Rat",
+      "provider": "Poly Haven",
+      "creator": "Sean Buckley",
+      "asset_type": "model",
+      "source_url": "https://polyhaven.com/a/street_rat",
+      "preview_url": "https://cdn.polyhaven.com/asset_img/thumbs/street_rat.png?format=png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "realistic"
+      ],
+      "topics": [
+        "animal",
+        "anatomy",
+        "quadruped",
+        "fur",
+        "organic",
+        "sculpt",
+        "leg",
+        "tail",
+        "realistic",
+        "silhouette"
+      ],
+      "gates": [
+        "G1",
+        "G2",
+        "G3",
+        "G7"
+      ],
+      "learning_points": [
+        "Distribuição anatômica de massas de tronco, cabeça e membros",
+        "Silhueta de focinho, orelha e patas antes dos pelos",
+        "Microdetalhes não corrigem anatomia primária"
+      ],
+      "cannot_prove_from_preview": [
+        "esqueleto comprovado",
+        "articulação demonstrada",
+        "topologia de deformação"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "polyhaven_gothic_cabinet_01",
+      "title": "Gothic Cabinet 01",
+      "provider": "Poly Haven",
+      "creator": "Kirill Sannikov",
+      "asset_type": "model",
+      "source_url": "https://polyhaven.com/a/GothicCabinet_01",
+      "preview_url": "https://cdn.polyhaven.com/asset_img/thumbs/GothicCabinet_01.png?format=png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "realistic"
+      ],
+      "topics": [
+        "furniture",
+        "wood",
+        "hard_surface",
+        "ornament",
+        "geometry",
+        "pbr",
+        "repetition",
+        "assembly",
+        "architecture"
+      ],
+      "gates": [
+        "G1.5",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "learning_points": [
+        "Divisão entre estruturas portantes, portas, ferragens e ornamentação",
+        "Relevo e recortes funcionais que devem existir como geometria quando afetarem silhueta",
+        "Materiais distintos respeitam limites físicos de cada peça"
+      ],
+      "cannot_prove_from_preview": [
+        "profundidade real de cada ornamento",
+        "portas realmente articuladas",
+        "pivôs internos do asset"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    },
+    {
+      "id": "polyhaven_boulder_01",
+      "title": "Boulder 01",
+      "provider": "Poly Haven",
+      "creator": "Rico Cilliers",
+      "asset_type": "model",
+      "source_url": "https://polyhaven.com/a/boulder_01",
+      "preview_url": "https://cdn.polyhaven.com/asset_img/thumbs/boulder_01.png?format=png",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "styles": [
+        "realistic"
+      ],
+      "topics": [
+        "rock",
+        "nature",
+        "sculpt",
+        "organic",
+        "remesh",
+        "bake",
+        "pbr",
+        "realistic",
+        "lod",
+        "high_poly"
+      ],
+      "gates": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "learning_points": [
+        "Grandes planos e fraturas devem existir antes do microrelevo",
+        "Separar visualmente macroformas de materiais e normal maps",
+        "Referência para decidir o que bakear ao simplificar assets de jogo"
+      ],
+      "cannot_prove_from_preview": [
+        "topologia low-poly específica",
+        "LOD disponível em todas as versões",
+        "performance Roblox sem importar"
+      ],
+      "source_evidence": "official_asset_page_and_public_license",
+      "preview_status": "REMOTE_URL_NOT_BUNDLED",
+      "notes": ""
+    }
+  ]
+}

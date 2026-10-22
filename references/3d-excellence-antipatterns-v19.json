@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "explanation": "Synthetic negative cases for modeling QA; not defects alleged in curated third-party assets.",
+  "cases": [
+    {"id":"duplicate_separate_jaw","problem":"Mandíbula separada duplicada ou mandíbula fundida na cabeça e repetida como J1","check":"Um único forge_part_id J1 e estrutura visual separada quando articulada","repair":"Remover instância incorporada, preservar a mandíbula independente e pivô coerente"},
+    {"id":"floating_part","problem":"Membro, asa ou folha desconectado do volume suporte","check":"Âncoras e sobreposição superficial intencional em GCB; render sem hiatos indevidos","repair":"Ajustar base da peça, não mascarar com material"},
+    {"id":"wrong_pivot","problem":"Asa, mandíbula ou cauda rotaciona por um ponto fora da junta","check":"Pivô e osso coincidentes com o centro funcional de articulação","repair":"Reposicionar origem/controlador preservando geometria aprovada"},
+    {"id":"false_surface_detail","problem":"Rachaduras, escamas ou placas importantes existem só em bump apesar de exigir relevo","check":"Wireframe/closeup e mesh avaliada demonstram espessura/abertura geométrica","repair":"Construir relevo real ou registrar aprovação explícita de textura como alternativa"},
+    {"id":"inconsistent_views","problem":"Vistas frontal e lateral exibem contagem incompatível de membros ou formas","check":"Inventário de partes com IDs únicos e vistas do mesmo modelo numericamente consistente","repair":"Corrigir a fonte numérica de geometria, regenerar vistas e reinspecionar arte original"},
+    {"id":"preview_claim_overreach","problem":"Tratar render de catálogo como prova de topologia, UV, rig, triangulação ou importação","check":"Indicar nível de evidência e exigir arquivo 3D real para inspeção","repair":"Remover afirmação não suportada; executar testes reais antes de aprovar"}
+  ]
+}

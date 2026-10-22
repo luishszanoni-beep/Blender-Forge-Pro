@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.3",
+  "family_id": "chair-family",
+  "slots": {
+    "seat": {
+      "options": {
+        "standard": {
+          "show_part_ids": [
+            "seat_cushion"
+          ]
+        },
+        "without_pad": {
+          "hide_part_ids": [
+            "seat_cushion"
+          ]
+        }
+      }
+    },
+    "upholstery": {
+      "options": {
+        "fabric": {
+          "material_overrides": {
+            "back_cushion": "fabric"
+          }
+        },
+        "steel": {
+          "material_overrides": {
+            "back_cushion": "steel"
+          }
+        }
+      }
+    }
+  },
+  "rules": [
+    {
+      "when": {
+        "seat": "without_pad"
+      },
+      "forbid": {
+        "upholstery": "fabric"
+      }
+    }
+  ]
+}

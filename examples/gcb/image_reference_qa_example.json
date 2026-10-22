@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "project_id": "magma_dragon_demo",
+  "subject_type": "creature",
+  "purpose": "image_references_for_3d",
+  "images": [
+    {
+      "id": "IMG01",
+      "path": "input/generated/dragon_side.png",
+      "view": "side",
+      "projection": "unknown",
+      "origin": "generated_design",
+      "confidence": "inferred",
+      "calibrated": false
+    }
+  ],
+  "parts": [
+    {
+      "id": "BODY",
+      "label": "Corpo principal",
+      "image_ids": [
+        "IMG01"
+      ],
+      "primitive": "box",
+      "confidence": "inferred",
+      "structural_note": "Base estrutural do torso, fixacao de pernas e asas",
+      "build_instruction": "Criar bloco inicial do tronco, conferir proporcoes e integridade das conexoes",
+      "connection_ids": [],
+      "moving": false,
+      "separate_mesh": true,
+      "pivot": null
+    },
+    {
+      "id": "HEAD",
+      "label": "Cabeca",
+      "image_ids": [
+        "IMG01"
+      ],
+      "primitive": "wedge",
+      "confidence": "inferred",
+      "structural_note": "Conectar ao pescoco, preservar articulacao da mandibula",
+      "build_instruction": "Modelar cunha volumetrica, orientar cranio e manter interface de articulacao",
+      "connection_ids": [
+        "BODY"
+      ],
+      "moving": true,
+      "separate_mesh": true,
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "modeling_steps": [
+    {
+      "id": "S1",
+      "part_ids": [
+        "BODY"
+      ],
+      "instruction": "Construir tronco e orientar eixo principal",
+      "acceptance": "Silhueta e largura do tronco consistentes com imagem"
+    },
+    {
+      "id": "S2",
+      "part_ids": [
+        "HEAD"
+      ],
+      "instruction": "Encaixar cabeca, manter objeto separado e pivo candidato",
+      "acceptance": "Junta acessivel; corpo sem fusao inesperada"
+    }
+  ],
+  "checks": [
+    {
+      "category": "identity",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    },
+    {
+      "category": "anatomy",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    },
+    {
+      "category": "connections",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    },
+    {
+      "category": "articulation",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    },
+    {
+      "category": "views",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    },
+    {
+      "category": "geometry",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    },
+    {
+      "category": "surface",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    },
+    {
+      "category": "handoff",
+      "status": "UNKNOWN",
+      "image_ids": [
+        "IMG01"
+      ],
+      "note": "Revisao dos pixels pendente"
+    }
+  ],
+  "review": {
+    "status": "pending",
+    "reviewer_role": "fidelity-auditor",
+    "inspected_image_ids": [],
+    "notes": "Exemplo demonstrativo; imagem nao incluida e nenhuma inspecao visual foi executada.",
+    "blockers": []
+  }
+}

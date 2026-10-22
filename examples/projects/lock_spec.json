@@ -1,0 +1,6 @@
+{
+  "locked_parts": [
+    {"part_id": "seat", "lock_geometry": true, "max_bbox_delta_mm": 0.5, "lock_materials": true},
+    {"part_id": "frame", "lock_geometry": true, "max_bbox_delta_mm": 0, "lock_materials": false}
+  ]
+}

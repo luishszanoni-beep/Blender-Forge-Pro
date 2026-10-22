@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "project_id": "stylized-rig-demo",
+  "title": "Stylized original articulated guardian - plan example",
+  "goal": "original_design",
+  "destination": "roblox",
+  "mode": "game_ready",
+  "units": "m",
+  "rig_required": true,
+  "dimensions_mm": {
+    "height": 2200,
+    "width": 920,
+    "depth": 450
+  },
+  "references": [],
+  "parts": [
+    {
+      "id": "torso",
+      "label": "Torso armor",
+      "required": true,
+      "confidence": "inferred",
+      "locked": false,
+      "reference_ids": [],
+      "features": [
+        {
+          "id": "chest-engraving",
+          "label": "Engraved emblem changes surface depth",
+          "representation": "geometry",
+          "required": true,
+          "source_ref_ids": []
+        }
+      ]
+    },
+    {
+      "id": "limbs",
+      "label": "Four articulated limbs",
+      "required": true,
+      "confidence": "inferred",
+      "locked": false,
+      "reference_ids": [],
+      "features": []
+    }
+  ],
+  "budgets": {
+    "triangles_max": 30000,
+    "materials_max": 6
+  },
+  "checks": {
+    "required_views": [
+      "front",
+      "back",
+      "left",
+      "right",
+      "front_right"
+    ]
+  },
+  "deliverables": [
+    "blend",
+    "glb"
+  ],
+  "notes": "Original design; not a claim to reproduce copyrighted character imagery."
+}

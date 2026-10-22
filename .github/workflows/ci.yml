@@ -1,0 +1,29 @@
+name: Source checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  source-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile Python
+        run: python -m compileall -q scripts tests
+      - name: Scan for common secrets
+        run: python scripts/security_scan.py
+      - name: Validate public-source catalog
+        run: python scripts/excellence_reference_router.py validate
+      # Full ATSE/GCB tests require the original binary Atlas PDF.
+      # See docs/PUBLICATION_STATUS.md.

@@ -1,0 +1,249 @@
+{
+  "gcb_version": "1.0",
+  "project_id": "demo-bloxy-plant",
+  "target": "roblox",
+  "units": {
+    "mode": "relative"
+  },
+  "source_references": [],
+  "visual_style": "bloxy geometric, NOT automatically low-poly",
+  "parts": [
+    {
+      "id": "STEM",
+      "label": "Caule central",
+      "primitive": "cylinder",
+      "dimensions": [
+        0.3,
+        0.3,
+        1.2
+      ],
+      "position": [
+        0,
+        0,
+        0.6
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.6
+      ],
+      "parent": null,
+      "stage": 1,
+      "confidence": "inferred",
+      "source_ids": [],
+      "separate_mesh": true
+    },
+    {
+      "id": "HEAD",
+      "label": "Cabeca principal",
+      "primitive": "box",
+      "dimensions": [
+        0.9,
+        0.65,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        1.4
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.275
+      ],
+      "parent": "STEM",
+      "stage": 2,
+      "confidence": "inferred",
+      "source_ids": [],
+      "separate_mesh": true
+    },
+    {
+      "id": "J1",
+      "label": "Mandibula inferior, mesh independente",
+      "primitive": "wedge",
+      "dimensions": [
+        0.63,
+        0.52,
+        0.16
+      ],
+      "position": [
+        0,
+        -0.1,
+        1.08
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0.08
+      ],
+      "parent": "HEAD",
+      "stage": 3,
+      "confidence": "inferred",
+      "source_ids": [],
+      "separate_mesh": true
+    },
+    {
+      "id": "LEAF_L",
+      "label": "Folha esquerda",
+      "primitive": "wedge",
+      "dimensions": [
+        0.5,
+        0.3,
+        0.09
+      ],
+      "position": [
+        -0.35,
+        0,
+        0.85
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        27
+      ],
+      "parent": "STEM",
+      "stage": 4,
+      "confidence": "inferred",
+      "source_ids": [],
+      "separate_mesh": true
+    },
+    {
+      "id": "LEAF_R",
+      "label": "Folha direita",
+      "primitive": "wedge",
+      "dimensions": [
+        0.5,
+        0.3,
+        0.09
+      ],
+      "position": [
+        0.35,
+        0,
+        0.85
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -27
+      ],
+      "parent": "STEM",
+      "stage": 4,
+      "confidence": "inferred",
+      "source_ids": [],
+      "separate_mesh": true
+    }
+  ],
+  "attachments": [
+    {
+      "child": "J1",
+      "parent": "HEAD",
+      "anchor_child": [
+        0,
+        0,
+        0.08
+      ],
+      "anchor_parent": [
+        0,
+        -0.1,
+        -0.24
+      ],
+      "tolerance": 0.005
+    },
+    {
+      "child": "HEAD",
+      "parent": "STEM",
+      "anchor_child": [
+        0,
+        0,
+        -0.2
+      ],
+      "anchor_parent": [
+        0,
+        0,
+        0.6
+      ],
+      "tolerance": 0.005
+    },
+    {
+      "child": "LEAF_L",
+      "parent": "STEM",
+      "anchor_child": [
+        0.25,
+        0,
+        0
+      ],
+      "anchor_parent": [
+        -0.12724836895290886,
+        0.11349762493488669,
+        0.25
+      ],
+      "tolerance": 0.005
+    },
+    {
+      "child": "LEAF_R",
+      "parent": "STEM",
+      "anchor_child": [
+        -0.25,
+        0,
+        0
+      ],
+      "anchor_parent": [
+        0.12724836895290886,
+        0.11349762493488669,
+        0.25
+      ],
+      "tolerance": 0.005
+    }
+  ],
+  "steps": [
+    {
+      "id": "S1",
+      "title": "Estrutura do caule",
+      "parts": [
+        "STEM"
+      ],
+      "notes": "Conferir o eixo vertical"
+    },
+    {
+      "id": "S2",
+      "title": "Cabeca",
+      "parts": [
+        "HEAD"
+      ],
+      "notes": "Comparar silhueta frontal/lateral"
+    },
+    {
+      "id": "S3",
+      "title": "Mandibula separada",
+      "parts": [
+        "J1"
+      ],
+      "notes": "Manter J1 unico e separado de HEAD; pivô compartilhado"
+    },
+    {
+      "id": "S4",
+      "title": "Folhas laterais",
+      "parts": [
+        "LEAF_L",
+        "LEAF_R"
+      ],
+      "notes": "Nao fundir folhas com caule"
+    }
+  ]
+}

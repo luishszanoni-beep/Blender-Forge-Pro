@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.3",
+  "project_id": "forge-chair-demo",
+  "destination": "web_glb",
+  "triangle_budget": 60000,
+  "base_triangles": 12000,
+  "features": [
+    {
+      "id": "seat_quilt_geometry",
+      "representation": "geometry",
+      "projected_size_px": 300,
+      "triangle_cost": 6000,
+      "priority": "critical",
+      "method": "quilt_panel"
+    },
+    {
+      "id": "seat_fine_grain",
+      "representation": "either",
+      "projected_size_px": 1.5,
+      "triangle_cost": 20000,
+      "priority": "low",
+      "method": "mesh"
+    },
+    {
+      "id": "seat_seam_geometry",
+      "representation": "geometry",
+      "projected_size_px": 15,
+      "triangle_cost": 800,
+      "priority": "high",
+      "method": "seam_mesh"
+    }
+  ]
+}

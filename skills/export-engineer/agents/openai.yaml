@@ -1,0 +1,3 @@
+interface:
+  display_name: "Export Engineer"
+  short_description: "Exports Blender masters and GLB/FBX as applicable, validates roundtrip and deliverables."

@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "project_id": "diagnostic-chair-demo",
+  "title": "Generic chair illustration - EXAMPLE ONLY",
+  "goal": "reference_match",
+  "destination": "web_glb",
+  "mode": "adaptive",
+  "units": "m",
+  "rig_required": false,
+  "dimensions_mm": {
+    "width": 650,
+    "depth": 570,
+    "height": 990
+  },
+  "references": [
+    {
+      "id": "ref-front",
+      "path": "examples/reference_images/chair_front.png",
+      "view": "front",
+      "projection": "unknown",
+      "observations": "illustrative schematic; not camera calibrated"
+    },
+    {
+      "id": "ref-side",
+      "path": "examples/reference_images/chair_side.png",
+      "view": "right",
+      "projection": "unknown",
+      "observations": "illustrative schematic; not camera calibrated"
+    },
+    {
+      "id": "ref-top",
+      "path": "examples/reference_images/chair_top.png",
+      "view": "top",
+      "projection": "unknown",
+      "observations": "illustrative schematic; not camera calibrated"
+    }
+  ],
+  "parts": [
+    {
+      "id": "seat",
+      "label": "Cushioned seat",
+      "required": true,
+      "confidence": "observed",
+      "locked": false,
+      "reference_ids": [
+        "ref-front",
+        "ref-side",
+        "ref-top"
+      ],
+      "features": [
+        {
+          "id": "seat-geometry-relief",
+          "label": "Physical raised perimeter stitching",
+          "representation": "geometry",
+          "required": true,
+          "source_ref_ids": [
+            "ref-top"
+          ],
+          "min_relief_mm": 0.8
+        },
+        {
+          "id": "seat-upholstery-color",
+          "label": "Fabric material color/roughness",
+          "representation": "material",
+          "required": true,
+          "source_ref_ids": [
+            "ref-front"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backrest",
+      "label": "Back cushion and frame",
+      "required": true,
+      "confidence": "observed",
+      "locked": false,
+      "reference_ids": [
+        "ref-front",
+        "ref-side"
+      ],
+      "features": [
+        {
+          "id": "back-profile",
+          "label": "Curved back cushion outline",
+          "representation": "geometry",
+          "required": true,
+          "source_ref_ids": [
+            "ref-front",
+            "ref-side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frame",
+      "label": "Four structural supports",
+      "required": true,
+      "confidence": "observed",
+      "locked": false,
+      "reference_ids": [
+        "ref-front",
+        "ref-side"
+      ],
+      "features": []
+    }
+  ],
+  "budgets": {
+    "triangles_max": 60000,
+    "materials_max": 10,
+    "glb_size_mb_max": 15
+  },
+  "checks": {
+    "required_views": [
+      "front",
+      "back",
+      "right",
+      "top",
+      "front_right"
+    ],
+    "dimension_tolerance_mm": 10
+  },
+  "deliverables": [
+    "blend",
+    "glb"
+  ],
+  "notes": "Deliberately generic; cannot claim manufacturing/brand fidelity from these schematic placeholders."
+}

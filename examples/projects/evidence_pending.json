@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "project_id": "diagnostic-chair-demo",
+  "gates": {
+    "G0": {
+      "state": "PENDING",
+      "evidence_files": []
+    },
+    "G1": {
+      "state": "PENDING",
+      "evidence_files": []
+    },
+    "G2": {
+      "state": "PENDING",
+      "evidence_files": []
+    },
+    "G3": {
+      "state": "PENDING",
+      "evidence_files": []
+    },
+    "G4": {
+      "state": "PENDING",
+      "evidence_files": []
+    },
+    "G5": {
+      "state": "PENDING",
+      "evidence_files": []
+    },
+    "G6": {
+      "state": "SKIPPED_NOT_APPLICABLE",
+      "evidence_files": []
+    },
+    "G7": {
+      "state": "PENDING",
+      "evidence_files": []
+    },
+    "G8": {
+      "state": "PENDING",
+      "evidence_files": []
+    }
+  },
+  "critical_blockers": [],
+  "views": [],
+  "geometry_proofs": [],
+  "deliverables": [],
+  "final_review": {
+    "decision": "PENDING",
+    "reviewer": ""
+  }
+}

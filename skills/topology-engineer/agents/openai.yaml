@@ -1,0 +1,3 @@
+interface:
+  display_name: "Topology Engineer"
+  short_description: "Optimizes and retopologizes meshes, checks normals, UVs, tris, LODs and target budgets."

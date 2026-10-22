@@ -1,0 +1,21 @@
+{
+  "project_id": "magma_dragon_demo",
+  "intent": "reference_model",
+  "target": "roblox",
+  "needs": {
+    "strict_fidelity": true,
+    "rigging": true,
+    "animation": true,
+    "absolute_scale_required": false,
+    "exact_materials": false,
+    "retarget_rig": false
+  },
+  "assets": [
+    {"id": "ART_SIDE", "role": "art_reference", "path": "input/magma_dragon.png", "view": "side"}
+  ],
+  "provided_information": {
+    "brief": "Dragao de magma quadrupede, estilo Bloxy, com rig de Idle",
+    "animation_clips": ["Idle"]
+  },
+  "unavailable": []
+}

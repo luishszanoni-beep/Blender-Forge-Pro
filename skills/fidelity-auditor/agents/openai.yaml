@@ -1,0 +1,3 @@
+interface:
+  display_name: "Fidelity Auditor"
+  short_description: "Audits model across calibrated views, geometry, detail and quality gates without inventing"

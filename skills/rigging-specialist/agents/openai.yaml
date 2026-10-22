@@ -1,0 +1,3 @@
+interface:
+  display_name: "Rigging Specialist"
+  short_description: "Builds optional articulation, skeletal rigs, weights, constraints and deform QA."

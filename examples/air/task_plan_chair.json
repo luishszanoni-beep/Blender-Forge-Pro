@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.4",
+  "project_id": "forge-chair-air-demo",
+  "tasks": [
+    {
+      "id": "file_inventory",
+      "skill": "reference-analyst",
+      "domain": "general",
+      "complexity": 1,
+      "uncertainty": 1,
+      "impact": 1,
+      "failure_cost": 1,
+      "requires_modalities": [
+        "text"
+      ],
+      "requires_tools": [
+        "filesystem"
+      ],
+      "tokens_in": 1000,
+      "tokens_out": 200,
+      "writes_scene": false,
+      "depends_on": [],
+      "deterministic": true,
+      "quality": "standard"
+    },
+    {
+      "id": "reference_interpretation",
+      "skill": "reference-analyst",
+      "domain": "vision",
+      "complexity": 4,
+      "uncertainty": 4,
+      "impact": 4,
+      "failure_cost": 4,
+      "requires_modalities": [
+        "text",
+        "image"
+      ],
+      "requires_tools": [
+        "image-inspection"
+      ],
+      "tokens_in": 6000,
+      "tokens_out": 1800,
+      "writes_scene": false,
+      "depends_on": [
+        "file_inventory"
+      ],
+      "deterministic": false,
+      "quality": "strict"
+    },
+    {
+      "id": "export_constraints",
+      "skill": "export-engineer",
+      "domain": "export",
+      "complexity": 2,
+      "uncertainty": 1,
+      "impact": 2,
+      "failure_cost": 2,
+      "requires_modalities": [
+        "text"
+      ],
+      "requires_tools": [
+        "none"
+      ],
+      "tokens_in": 1700,
+      "tokens_out": 600,
+      "writes_scene": false,
+      "depends_on": [
+        "file_inventory"
+      ],
+      "deterministic": false,
+      "quality": "standard"
+    },
+    {
+      "id": "blockout_recipe",
+      "skill": "geometry-architect",
+      "domain": "spatial",
+      "complexity": 4,
+      "uncertainty": 3,
+      "impact": 5,
+      "failure_cost": 4,
+      "requires_modalities": [
+        "text"
+      ],
+      "requires_tools": [
+        "blender"
+      ],
+      "tokens_in": 7500,
+      "tokens_out": 3000,
+      "writes_scene": true,
+      "depends_on": [
+        "reference_interpretation"
+      ],
+      "deterministic": false,
+      "quality": "strict"
+    },
+    {
+      "id": "surface_stitches",
+      "skill": "sculpt-surface",
+      "domain": "surface",
+      "complexity": 4,
+      "uncertainty": 3,
+      "impact": 4,
+      "failure_cost": 3,
+      "requires_modalities": [
+        "text"
+      ],
+      "requires_tools": [
+        "blender"
+      ],
+      "tokens_in": 6000,
+      "tokens_out": 2400,
+      "writes_scene": true,
+      "depends_on": [
+        "blockout_recipe"
+      ],
+      "deterministic": false,
+      "quality": "strict"
+    },
+    {
+      "id": "independent_audit",
+      "skill": "fidelity-auditor",
+      "domain": "audit",
+      "complexity": 5,
+      "uncertainty": 4,
+      "impact": 5,
+      "failure_cost": 5,
+      "requires_modalities": [
+        "text",
+        "image"
+      ],
+      "requires_tools": [
+        "image-inspection"
+      ],
+      "tokens_in": 7000,
+      "tokens_out": 1500,
+      "writes_scene": false,
+      "depends_on": [
+        "surface_stitches"
+      ],
+      "deterministic": false,
+      "quality": "critical"
+    },
+    {
+      "id": "export_hash",
+      "skill": "export-engineer",
+      "domain": "export",
+      "complexity": 1,
+      "uncertainty": 1,
+      "impact": 2,
+      "failure_cost": 1,
+      "requires_modalities": [
+        "text"
+      ],
+      "requires_tools": [
+        "filesystem"
+      ],
+      "tokens_in": 150,
+      "tokens_out": 100,
+      "writes_scene": false,
+      "depends_on": [
+        "independent_audit"
+      ],
+      "deterministic": true,
+      "quality": "standard"
+    }
+  ]
+}

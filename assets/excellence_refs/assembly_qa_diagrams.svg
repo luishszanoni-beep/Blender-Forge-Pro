@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470">
+<rect width="1080" height="470" fill="#101921"/>
+<g font-family="DejaVu Sans,Arial,sans-serif" fill="#ebf3fa">
+<text x="40" y="45" font-size="26" font-weight="700">QA GEOMÉTRICO | EXEMPLOS DIDÁTICOS</text>
+<text x="40" y="71" font-size="14" fill="#abbfd0">Ilustração original e abstrata; não representa geometria de modelos de terceiros.</text>
+</g>
+<g font-family="DejaVu Sans,Arial,sans-serif" font-size="16" text-anchor="middle">
+<g transform="translate(35,105)">
+<rect width="320" height="325" rx="12" fill="#1f2b38" stroke="#3c5367"/>
+<text x="160" y="36" fill="#e7edf2" font-weight="bold">MANDÍBULA DUPLICADA</text>
+<text x="80" y="70" fill="#fc867d">ERRO</text><text x="246" y="70" fill="#7ed8ae">CORRETO</text>
+<rect x="31" y="100" width="92" height="58" rx="18" fill="#c75352"/><rect x="46" y="158" width="69" height="18" rx="5" fill="#f78e6f"/>
+<rect x="46" y="185" width="69" height="16" rx="5" fill="#f78e6f" stroke="#ffcdad"/>
+<rect x="196" y="100" width="92" height="58" rx="18" fill="#7996ad"/><rect x="210" y="165" width="72" height="20" rx="5" fill="#7ed8ae"/><circle cx="212" cy="160" r="5" fill="#e4f8ff"/>
+<text x="83" y="245" fill="#b3cadb" font-size="13">J1 em duplicidade</text><text x="245" y="245" fill="#b3cadb" font-size="13">Um único J1</text>
+<text x="160" y="290" fill="#b3cadb" font-size="12">Exigir IDs únicos e peças móveis distintas</text>
+</g>
+<g transform="translate(380,105)">
+<rect width="320" height="325" rx="12" fill="#1f2b38" stroke="#3c5367"/>
+<text x="160" y="36" fill="#e7edf2" font-weight="bold">PEÇA FLUTUANTE</text>
+<text x="80" y="70" fill="#fc867d">ERRO</text><text x="246" y="70" fill="#7ed8ae">CORRETO</text>
+<rect x="31" y="115" width="90" height="90" rx="18" fill="#c75352"/><rect x="61" y="85" width="30" height="24" rx="5" fill="#f78e6f"/>
+<rect x="197" y="115" width="90" height="90" rx="18" fill="#7996ad"/><rect x="227" y="105" width="30" height="30" rx="5" fill="#7ed8ae"/>
+<path d="M75 110 V115" stroke="#ffc4b4" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="82" y="247" fill="#b3cadb" font-size="13">Folga no encaixe</text><text x="246" y="247" fill="#b3cadb" font-size="13">Âncora coerente</text>
+<text x="160" y="290" fill="#b3cadb" font-size="12">Verificar relações espaciais e renders</text>
+</g>
+<g transform="translate(725,105)">
+<rect width="320" height="325" rx="12" fill="#1f2b38" stroke="#3c5367"/>
+<text x="160" y="36" fill="#e7edf2" font-weight="bold">PIVÔ INCORRETO</text>
+<text x="80" y="70" fill="#fc867d">ERRO</text><text x="246" y="70" fill="#7ed8ae">CORRETO</text>
+<rect x="37" y="110" width="54" height="86" rx="9" fill="#c75352"/><path d="M92 126 L128 148 L106 180 Z" fill="#f78e6f"/><circle cx="132" cy="197" r="7" fill="none" stroke="#fff1ca" stroke-width="3"/>
+<rect x="205" y="110" width="54" height="86" rx="9" fill="#7996ad"/><path d="M259 126 L292 148 L267 180 Z" fill="#7ed8ae"/><circle cx="259" cy="126" r="7" fill="none" stroke="#fff1ca" stroke-width="3"/>
+<text x="82" y="247" fill="#b3cadb" font-size="13">Fora da junta</text><text x="246" y="247" fill="#b3cadb" font-size="13">No eixo da junta</text>
+<text x="160" y="290" fill="#b3cadb" font-size="12">Conferir bone/origem com rotação de teste</text>
+</g>
+</g>
+</svg>

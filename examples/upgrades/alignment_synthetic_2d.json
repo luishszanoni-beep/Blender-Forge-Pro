@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.3",
+  "reference_id": "ref-demo",
+  "view": "front",
+  "projection": "orthographic",
+  "image_size_px": [
+    1024,
+    1024
+  ],
+  "camera_verified": false,
+  "verified_by": "",
+  "max_rms_px": 2,
+  "landmarks": [
+    {
+      "id": "center_top",
+      "model_xy_m": [
+        0,
+        1
+      ],
+      "pixel_xy": [
+        512,
+        900
+      ]
+    },
+    {
+      "id": "left_bottom",
+      "model_xy_m": [
+        -0.5,
+        0
+      ],
+      "pixel_xy": [
+        312,
+        500
+      ]
+    },
+    {
+      "id": "right_bottom",
+      "model_xy_m": [
+        0.5,
+        0
+      ],
+      "pixel_xy": [
+        712,
+        500
+      ]
+    }
+  ]
+}
